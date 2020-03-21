@@ -1,6 +1,8 @@
 #!/bin/sh
 
-jawiki_dump=var/jawiki-latest-jawikis.sql
+set -e
+
+jawiki_dump=var/jawiki-latest-langlinks.sql
 jawiki_db=var/jawiki-db.sqlite
 
 skip_lines=$(expr $(grep -n INSERT ${jawiki_dump} | head -n 100 | cut -d ":" -f 1 | head -n 1) - 1)
