@@ -38,7 +38,7 @@ with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
             if len(values) != 3:
                 continue
             id = values[0]
-            lang = values[1]
+            lang = values[1].replace("'", '')
             title = values[2].replace("'", '')
 
             try:
