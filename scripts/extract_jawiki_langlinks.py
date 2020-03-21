@@ -12,14 +12,14 @@ c = conn.cursor()
 
 table_defs = [
     """
-CREATE TABLE `langlinks` (
-  `ll_from` int(8) NOT NULL,
-  `ll_lang` varbinary(20),
-  `ll_title` varbinary(255));
+CREATE TABLE langlinks (
+  id int(8) NOT NULL,
+  lang varbinary(20),
+  title varbinary(255));
 """,
     """
 CREATE INDEX idx_langlinks_fromlang 
-ON langlinks (ll_from, ll_lang);
+ON langlinks (id, lang);
 """
 ]
 

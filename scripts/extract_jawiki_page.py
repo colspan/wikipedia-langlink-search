@@ -12,10 +12,14 @@ c = conn.cursor()
 
 table_defs = [
     """
-CREATE TABLE `page` (
-  `page_id` int(8) NOT NULL PRIMARY KEY,
-  `page_title` varbinary(255)
+CREATE TABLE page (
+  id int(8) NOT NULL PRIMARY KEY,
+  title varbinary(255)
   );
+""",
+    """
+CREATE INDEX idx_page_title 
+ON page (title);
 """,
 ]
 
